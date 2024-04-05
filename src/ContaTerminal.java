@@ -11,17 +11,19 @@ public class ContaTerminal {
         
         System.out.println("Por favor, digite o número da Agência!");
         Agencia = input.nextInt();
+        input.nextLine();               //Skip new line
 
         System.out.println("Por favor, digite o número da Conta!");
-        Conta = input.next();
+        Conta = input.nextLine();
 
         System.out.println("Por favor, digite o nome do cliente!");
-        NomeCliente = input.next();
+        NomeCliente = input.nextLine();
 
         System.out.println("Por favor, digite o saldo!");
         Saldo = input.nextFloat();
 
-        System.out.println("Olá " + NomeCliente + ", obrigado por criar uma conta em nosso banco, sua agência é " + Agencia + ", conta " + Conta + " e seu saldo " + Saldo + " já está disponível para saque.");
+        System.out.println("\nOlá " + NomeCliente.toUpperCase() + ", obrigado por criar uma conta em nosso banco, sua agência é " + Agencia + ", conta " + Conta + " e seu saldo de R$" + Saldo + " já está disponível para saque.\n");
 
+        input.close();
     }
 }
